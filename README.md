@@ -51,8 +51,11 @@ XML based responses -> https://github.com/rest-assured/rest-assured/wiki/Usage#e
 
 ## References
 https://github.com/rest-assured/rest-assured
+
 https://semaphoreci.com/community/tutorials/testing-rest-endpoints-using-rest-assured
+
 http://joel-costigliola.github.io/assertj/
+
 http://junit.org/junit5/docs/current/user-guide/
 
 
