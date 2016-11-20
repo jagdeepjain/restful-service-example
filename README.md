@@ -1,5 +1,5 @@
 # restful-service-example
-Sample Project Demonstrating Testing of REST API
+Sample Project Demonstrating Testing of REST API using application/json
 
 ## Usage
 ```
@@ -45,3 +45,14 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 jagdeepjain:restful-service-example jagdeepjain$
 ```
+
+## TODO
+XML based responses -> https://github.com/rest-assured/rest-assured/wiki/Usage#example-2---xml
+
+## References
+https://github.com/rest-assured/rest-assured
+https://semaphoreci.com/community/tutorials/testing-rest-endpoints-using-rest-assured
+http://joel-costigliola.github.io/assertj/
+http://junit.org/junit5/docs/current/user-guide/
+
+
