@@ -1,7 +1,7 @@
 # restful-service-example
 Sample Project Demonstrating Testing of REST API
 
-==Usage
+## Usage
 ```
 $ mvn verify
 $ mvn package
@@ -19,12 +19,12 @@ http://localhost:8080/app/api/ftoc/70
 
 It will cover 70 Degree F into equivalent Centigrade.
 
-==Test Execution
+## Test Execution
 ```
 $ mvn test -Dtest=ConversionTest
 ```
 
-==Test Output
+## Test Output
 ```
 -------------------------------------------------------
  T E S T S
