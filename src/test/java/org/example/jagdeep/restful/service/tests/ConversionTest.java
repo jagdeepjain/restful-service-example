@@ -17,9 +17,14 @@ class ConversionTest {
     @Test
     @DisplayName("Conversion from fahrenheit to centigrade.")
     void conversionTest() {
-        JsonPath conversion = given().contentType("application/json")
-                .when().get("http://localhost:8080/app/api/ftoc/100").then()
-                .statusCode(200).extract().jsonPath();
+        JsonPath conversion = given()
+                .contentType("application/json")
+                .when()
+                .get("http://localhost:8080/app/api/ftoc/100")
+                .then()
+                .statusCode(200)
+                .extract()
+                .jsonPath();
         
         assertThat(conversion.getInt("fahrenheit")).isEqualTo(100);
         assertThat(conversion.getInt("centigrade")).isEqualTo(38);
