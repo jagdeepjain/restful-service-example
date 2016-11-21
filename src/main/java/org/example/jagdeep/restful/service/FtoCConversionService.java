@@ -12,21 +12,35 @@ import javax.ws.rs.core.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-@Path("/api/ftoc")
+@Path("/api/conversion")
 public class FtoCConversionService {
-    @Path("/{f}")
+        
+    @Path("/toCentigrade/{f}")
     @GET
     @Produces("application/json")
-    public Response convertFtoCfromInput(@PathParam("f") float f) {
+    public Response convertFtoCfromInput(@PathParam("f") int fahrenheit) {
         JSONObject jsonObject = new JSONObject();
         try {
             int centigrade;
-            centigrade = Math.round((f-32)*5/9);
-            jsonObject.put("fahrenheit", f);
+            centigrade = ((fahrenheit - 32) * 5) / 9;
+            jsonObject.put("fahrenheit", fahrenheit);
             jsonObject.put("centigrade", centigrade);
         } catch (JSONException je) {
             
         }
         return Response.status(200).entity(jsonObject.toString()).build();
+    }
+    
+    @Path("/toFahrenheit/{c}")
+    @GET
+    @Produces("application/xml")
+    public String convertCtoFfromInput(@PathParam("c") int centigrade) {
+        int fahrenheit;
+        fahrenheit = ((centigrade * 9) / 5) + 32;
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+               "<conversion>" + 
+               "<centigrade>" + centigrade + "</centigrade>" +
+               "<fahrenheit>" + fahrenheit + "</fahrenheit>" + 
+               "</conversion>";
     }
 }

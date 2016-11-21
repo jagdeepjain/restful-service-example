@@ -22,4 +22,5 @@
 		<servlet-name>WebService</servlet-name>
 		<url-pattern>/app/*</url-pattern>
 	</servlet-mapping>
+	
 </web-app>

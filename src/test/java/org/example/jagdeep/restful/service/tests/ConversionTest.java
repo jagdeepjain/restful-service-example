@@ -17,26 +17,26 @@ class ConversionTest {
     
     @Test
     @DisplayName("Conversion from fahrenheit to centigrade.")
-    void conversionTest() {
+    void conversionF2CTest() {
         JsonPath conversion = given()
                 .contentType("application/json")
                 .when()
-                .get("http://localhost:8080/app/api/ftoc/100")
+                .get("http://localhost:8080/app/api/conversion/toCentigrade/100")
                 .then()
                 .statusCode(200)
                 .extract()
                 .jsonPath();
         
         assertThat(conversion.getInt("fahrenheit")).isEqualTo(100);
-        assertThat(conversion.getInt("centigrade")).isEqualTo(38);
+        assertThat(conversion.getInt("centigrade")).isEqualTo(37);
     }
     
     @Test
-    @DisplayName("Conversion from fahrenheit to centigrade.")
-    void yetAnotherTest() {
-        given().when().get("http://localhost:8080/app/api/ftoc/70").then()
-        .body("fahrenheit",equalTo(70))
-        .body("centigrade",equalTo(21));
+    @DisplayName("Conversion from centigrade to fahrenheit.")
+    void conversionC2FTest() {
+        given().when().get("http://localhost:8080/app/api/conversion/toFahrenheit/37").then()
+        .body("conversion.centigrade",equalTo("37"))
+        .body("conversion.fahrenheit",equalTo("98"));
     }
     
     
