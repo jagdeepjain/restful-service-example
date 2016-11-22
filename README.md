@@ -35,18 +35,18 @@ $ mvn clean test
  T E S T S
 -------------------------------------------------------
 Running org.example.jagdeep.restful.service.tests.ConversionTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.195 sec - in org.example.jagdeep.restful.service.tests.ConversionTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.519 sec - in org.example.jagdeep.restful.service.tests.ConversionTest
 
 Results :
 
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 9.414 s
-[INFO] Finished at: 2016-11-21T11:16:16+05:30
-[INFO] Final Memory: 21M/279M
+[INFO] Total time: 12.343 s
+[INFO] Finished at: 2016-11-22T11:17:00+05:30
+[INFO] Final Memory: 21M/275M
 [INFO] ------------------------------------------------------------------------
 jagdeepjain:restful-service-example jagdeepjain$
 ```
