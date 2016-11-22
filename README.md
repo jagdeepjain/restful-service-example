@@ -16,9 +16,9 @@ Above will start server...
 
 Now you can open browser and enter the service URL as below:
 
-http://localhost:8080/app/api/conversion/toCentigrade/100
+http://localhost:8080/app/api/conversion/toCentigrade/<number>
 
-http://localhost:8080/app/api/conversion/toFahrenheit/37
+http://localhost:8080/app/api/conversion/toFahrenheit/<number>
 
 
 
