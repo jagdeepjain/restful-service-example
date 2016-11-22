@@ -1,32 +1,31 @@
 # restful-service-example
 Sample Project Demonstrating Testing of REST API using application/json
 
-## Usage
+## Start Web Service Container
 ```
 $ mvn verify -Dmaven.test.skip=true
 $ mvn package -Dmaven.test.skip=true
-$ java -jar target/dependency/jetty-runner.jar target/app.war
+$ java -jar target/dependency/jetty-runner.jar --port 4444 target/app.war
 ```
 
 Above will start server...
 ```
-2016-11-21 00:55:38.728:INFO:oejs.AbstractConnector:main: Started ServerConnector@60099951{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
-2016-11-21 00:55:38.729:INFO:oejs.Server:main: Started @5108ms
+2016-11-22 13:39:13.364:INFO:oejs.AbstractConnector:main: Started ServerConnector@6c1a5b54{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2016-11-22 13:39:13.375:INFO:oejs.Server:main: Started @10654ms
 ```
 
 Now you can open browser and enter the service URL as below:
 
-http://localhost:8080/app/api/conversion/toCentigrade/<number>
+http://localhost:4444/app/api/conversion/toCentigrade/numberForCoversion
 
-http://localhost:8080/app/api/conversion/toFahrenheit/<number>
-
+http://localhost:4444/app/api/conversion/toFahrenheit/numberForCoversion
 
 
 It will convert 70 Degree Fahrenheit to equivalent Centigrade.
 
 ## Test Execution
 ```
-$ mvn clean test
+$ mvn test
 ```
 
 ## Test Output
@@ -52,9 +51,11 @@ jagdeepjain:restful-service-example jagdeepjain$
 ```
 
 ## TODO
-XML based responses -> https://github.com/rest-assured/rest-assured/wiki/Usage#example-2---xml
+
 
 ## References
+https://github.com/rest-assured/rest-assured/wiki/Usage#example-2---xml
+
 https://github.com/rest-assured/rest-assured
 
 https://semaphoreci.com/community/tutorials/testing-rest-endpoints-using-rest-assured
