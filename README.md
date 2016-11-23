@@ -6,22 +6,21 @@ Sample Project Demonstrating Testing of REST API using application/json
 $ mvn verify -Dmaven.test.skip=true
 $ mvn package -Dmaven.test.skip=true
 $ java -jar target/dependency/jetty-runner.jar --port 4444 target/app.war
-```
-
-It will look like as below:
-
-```
+.
+.
+.
+.
 2016-11-22 13:39:13.364:INFO:oejs.AbstractConnector:main: Started ServerConnector@6c1a5b54{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
 2016-11-22 13:39:13.375:INFO:oejs.Server:main: Started @10654ms
 ```
 
 Now you can open browser and enter the service URL.
 
-fahrenheit to centigrade coversion service:
+fahrenheit to centigrade conversion service:
 
 http://localhost:4444/app/api/conversion/toCentigrade/numberForConversion
 
-centigrade to fahrenheit coversion service:
+centigrade to fahrenheit conversion service:
 
 http://localhost:4444/app/api/conversion/toFahrenheit/numberForConversion
 
