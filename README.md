@@ -8,20 +8,23 @@ $ mvn package -Dmaven.test.skip=true
 $ java -jar target/dependency/jetty-runner.jar --port 4444 target/app.war
 ```
 
-Above will start server...
+It will look like as below:
+
 ```
 2016-11-22 13:39:13.364:INFO:oejs.AbstractConnector:main: Started ServerConnector@6c1a5b54{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
 2016-11-22 13:39:13.375:INFO:oejs.Server:main: Started @10654ms
 ```
 
-Now you can open browser and enter the service URL as below:
+Now you can open browser and enter the service URL.
 
-http://localhost:4444/app/api/conversion/toCentigrade/numberForCoversion
+fahrenheit to centigrade coversion service:
 
-http://localhost:4444/app/api/conversion/toFahrenheit/numberForCoversion
+http://localhost:4444/app/api/conversion/toCentigrade/numberForConversion
 
+centigrade to fahrenheit coversion service:
 
-It will convert 70 Degree Fahrenheit to equivalent Centigrade.
+http://localhost:4444/app/api/conversion/toFahrenheit/numberForConversion
+
 
 ## Test Execution
 ```
