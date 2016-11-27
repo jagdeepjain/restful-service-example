@@ -1,7 +1,7 @@
 # restful-service-example
-Sample Project Demonstrating Testing of REST API using application/json
+I have developed two services using REST API specifically for demonstrating testing of REST API. There are two services, one is returning JSON and the other one is returning XML output. RestAssured provides you a way where you can test JSON as well as XML response. These services are deployed on Jetty Runner.
 
-## Start Web Service Container
+## Start Web Service Using Jetty Runner
 ```
 $ mvn verify -Dmaven.test.skip=true
 $ mvn package -Dmaven.test.skip=true
@@ -16,11 +16,11 @@ $ java -jar target/dependency/jetty-runner.jar --port 4444 target/app.war
 
 Now you can open browser and enter the service URL.
 
-fahrenheit to centigrade conversion service:
+fahrenheit to centigrade conversion service, returning JSON body:
 
 http://localhost:4444/app/api/conversion/toCentigrade/numberForConversion
 
-centigrade to fahrenheit conversion service:
+centigrade to fahrenheit conversion service, returning XML body:
 
 http://localhost:4444/app/api/conversion/toFahrenheit/numberForConversion
 
