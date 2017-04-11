@@ -18,11 +18,11 @@ Now you can open browser and enter the service URL.
 
 fahrenheit to centigrade conversion service, returning JSON body:
 
-http://localhost:4444/app/api/conversion/toCentigrade/<numberForConversion>
+http://localhost:4444/app/api/conversion/toCentigrade/100
 
 centigrade to fahrenheit conversion service, returning XML body:
 
-http://localhost:4444/app/api/conversion/toFahrenheit/<numberForConversion>
+http://localhost:4444/app/api/conversion/toFahrenheit/100
 
 
 ## Test Execution
